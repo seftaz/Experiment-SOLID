@@ -113,3 +113,110 @@
 
 مجموع تعداد تغییرات: 6
 
+##Step2:
+
+<table dir='rtl'>
+<tbody>
+<tr>
+<td rowspan="2" width="240">
+<p>اصل 1</p>
+<p>Single Responsibility</p>
+</td>
+<td width="95">
+<p><strong>موارد تحقق</strong></p>
+</td>
+<td width="454">
+<p>میتوان گفت کلاس های ایمیل و اس ام اس  یک کار واحد میکنند و حتی کلاس main نیز یک کنترلر است</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>موارد نقض</strong></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2">
+<p>اصل 2</p>
+<p>Open-Close Principle (OCP)</p>
+</td>
+<td>
+<p><strong>موارد تحقق</strong></p>
+</td>
+<td>
+<p>نابع main میتوان گفت دقیقا همین موضوع را نشان میدهد و کلاس Message نیز به این صورت است.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>موارد نقض</strong></p>
+</td>
+<td>
+<p>کلاس MessageService دقیقا مشکل ماست برای اضافه شدن سرویس جدید هم در خودشو هم در تمامی فرزندانش تغییر ایجاد میشود.</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2">
+<p>اصل 3</p>
+<p>Liskov Substitution Principle</p>
+</td>
+<td>
+<p><strong>موارد تحقق</strong></p>
+</td>
+<td>
+<p>در ارث بری سرویس ها میتوان دید که متد ها به طور درست حضور دارند ولی خالی هستند ولی هر سرویس دقیقا زیر مجموعه از نوع سرویس ماست و حتی خود مسیج ها نیز یر مجموعه از مسیج است </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>موارد نقض</strong></p>
+</td>
+<td>
+<p>نقض نشده است.</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2">
+<p>اصل 4</p>
+<p>Interface Segregation Principle</p>
+</td>
+<td>
+<p><strong>موارد تحقق</strong></p>
+</td>
+<td>
+<p>ندارد.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>موارد نقض</strong></p>
+</td>
+<td>
+<p>اینترفیس سرویس که داریم به طور کامل مشکل دارد  و دقیقا هر متد آن برای یکی از کلاس های زیرین خودش بدرد میخورد و باقی متد ها باید خالی بمانند.</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2">
+<p>اصل 5</p>
+<p>Dependency Inversion Principle</p>
+</td>
+<td>
+<p><strong>موارد تحقق</strong></p>
+</td>
+<td>
+<p>کلاس Message به درستی است و به طور کامل این وابسنگی در آن رعایت شده است.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>موارد نقض</strong></p>
+</td>
+<td>
+<p>وابستگی سرویس به زیر مجموعه هایش برای افزایش متد به نظرم مشکل زااست</p>
+</td>
+</tr>
+</tbody>
+</table>
+
